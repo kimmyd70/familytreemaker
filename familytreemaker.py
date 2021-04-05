@@ -96,8 +96,11 @@ class Person:
 			label += '\\n' + str(self.attr['notes'])
 		opts = ['label="' + label + '"']
 		opts.append('style=filled')
-		opts.append('fillcolor=' + ('F' in self.attr and 'bisque' or
-					('M' in self.attr and 'azure2' or 'white')))
+		opts.append('fontname=Avenir')
+		opts.append('fontcolor=black')
+		opts.append('fontsize=10')
+		opts.append('fillcolor=' + ('F' in self.attr and 'gold' or
+					('M' in self.attr and 'cornflowerblue')))
 		return self.id + '[' + ','.join(opts) + ']'
 
 class Household:
@@ -326,7 +329,6 @@ class Family:
 		"""
 		# Find the first households
 		gen = [ancestor]
-
 		print('digraph {\n' + \
 		      '\tnode [shape=box];\n' + \
 		      '\tedge [dir=none];\n')
