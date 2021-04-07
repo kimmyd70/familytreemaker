@@ -85,7 +85,7 @@ class Person:
 	def graphviz(self):
 		label = self.name
 		if 'surname' in self.attr:
-			label += '\\n« ' + str(self.attr['surname']) + '»'
+			label += '\\n« ' + str(self.attr['surname']) + ' »'
 		if 'birthday' in self.attr:
 			label += '\\n' + str(self.attr['birthday'])
 			if 'deathday' in self.attr:
@@ -98,9 +98,9 @@ class Person:
 		opts.append('style=filled')
 		opts.append('fontname=Avenir')
 		opts.append('fontcolor=black')
-		opts.append('fontsize=10')
+		opts.append('fontsize=18')
 		opts.append('fillcolor=' + ('F' in self.attr and 'gold' or
-					('M' in self.attr and 'cornflowerblue')))
+					('M' in self.attr and 'cornflowerblue' or 'whitesmoke')))
 		return self.id + '[' + ','.join(opts) + ']'
 
 class Household:
@@ -329,9 +329,9 @@ class Family:
 		"""
 		# Find the first households
 		gen = [ancestor]
-		print('digraph {\n' + \
-		      '\tnode [shape=box];\n' + \
-		      '\tedge [dir=none];\n')
+		print('digraph {graph [label = "The Simpsons Lineage", labelloc=t, labeljust=l, bgcolor=grey, fontsize=36]\n' + \
+			'\tnode [shape=box3d, color=whitesmoke, margin=.2];\n' + \
+			'\tedge [dir=none];\n')
 
 		for p in self.everybody.values():
 			print('\t' + p.graphviz() + ';')
@@ -349,7 +349,7 @@ def main():
 	"""
 	# Parse command line options
 	parser = argparse.ArgumentParser(description=
-			 'Generates a family tree graph from a simple text file')
+			'Generates a family tree graph from a simple text file')
 	parser.add_argument('-a', dest='ancestor',
 						help='make the family tree from an ancestor (if '+
 						'omitted, the program will try to find an ancestor)')

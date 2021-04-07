@@ -1,0 +1,18 @@
+# This file is an example to show how to format a family.
+
+# Two lines represent an union:
+Abraham Jebediah ”Abe” Simpson II (M, birthday=05-25-1910, surname=Grampa)
+Mona Penelope Simpson(F, birthday=03-15-1929, deathday=05-11-2008, surname=neé Olsen)
+	Homer Jay Simpson (M, birthday=05-12-1956)
+	Abbey Simpson (F, notes=Abe + Edwina, birthday=1963)
+	Herbert Powell(M, notes=Abe + Gaby, birthday=1976)
+
+# Another union (2 parents + 3 children), father is one the previous union's children:
+Homer Jay Simpson (M, birthday=05-12-1956)
+Marjorie Jacqueline Simpson (F, birthday=03-19-1956, surname=neé Bouvier, notes=sisters Patty and Selma)
+	Bartholomew JoJo Simpson ( M, birthday=04-01-1980)
+	Lisa Marie Simpson (F, birthday=05-09-1982)
+	Margaret Evelyn Simpson (F, birthday=01-12-1989)
+	Snowball II (F,surname=aka Snowball V)
+	Satan's Little Helper (M, surname=Greyhound, birthday=05-12)
+
