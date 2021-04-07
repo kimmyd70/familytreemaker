@@ -329,8 +329,8 @@ class Family:
 		"""
 		# Find the first households
 		gen = [ancestor]
-		print('digraph {graph [label = "The Simpsons Lineage", labelloc=t, labeljust=l, bgcolor=grey, fontsize=36]\n' + \
-			'\tnode [shape=box3d, color=whitesmoke, margin=.2];\n' + \
+		print('digraph {graph [dpi=100, label = "The Simpsons Lineage", labelloc=t, labeljust=l, bgcolor=grey, fontsize=36]\n' + \
+			'\tnode [shape=box3d, color=whitesmoke, margin=.3];\n' + \
 			'\tedge [dir=none];\n')
 
 		for p in self.everybody.values():
