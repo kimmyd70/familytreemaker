@@ -18,6 +18,9 @@ For instance:
 
 $ ./familytreemaker.py -a 'Louis XIV' LouisXIVfamily.txt | \
 	dot -Tpng -o LouisXIVfamily.png
+ 
+./familytreemaker.py Simpsons.txt | dot -Tpng -o Simpsonsfamily.png
+
 
 will generate the tree from the infos in LouisXIVfamily.txt, starting from
 Louis XIV and saving the image in LouisXIVfamily.png.
